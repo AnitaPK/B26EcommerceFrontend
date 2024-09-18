@@ -2,9 +2,9 @@ import React, { useContext } from "react";
 import { UserContext } from "../context/userContext";
 import { Routes, Route, Link } from "react-router-dom";
 import "./DashboardAsideBar.css";
-// import ProductList from "../components/Products/ProductList";
+import ProductList from "../components/Products/ProductList";
 import AddCategory from "../components/Category/AddCategory";
-// import AddProduct from "../components/Products/AddProduct";
+import AddProduct from "../components/Products/AddProduct";
 import CategoryList from "../components/Category/CategoryList";
 
 const DashboardAside = () => {
@@ -17,11 +17,11 @@ const DashboardAside = () => {
         {user.role == "admin" ? (
           <ul className="nav">
             <li>
-              {/* <Link to="products">Products</Link> */}
+              <Link to="products">Products</Link>
             </li>
             <hr></hr>
             <li>
-              {/* <Link to="addProduct">Add Product</Link> */}
+              <Link to="addProduct">Add Product</Link>
             </li>
             <hr></hr>
             <li>
@@ -55,10 +55,10 @@ const DashboardAside = () => {
 
         <div className="main-content">
           <Routes>
-            {/* <Route path="products" element={<ProductList/>} /> */}
+            <Route path="products" element={<ProductList/>} />
             <Route path="category" element={<CategoryList />} />
             <Route path="cart" element={<h1>cart</h1>} />
-            {/* <Route path="addProduct" element={<AddProduct />} /> */}
+            <Route path="addProduct" element={<AddProduct />} />
             <Route path="addCategory" element={<AddCategory />} />
 
             <Route
